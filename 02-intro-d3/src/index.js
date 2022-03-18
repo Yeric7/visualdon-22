@@ -29,6 +29,8 @@ d3.select("#circle2").attr("fill", "blue").attr("cx", "200")
 
 
 svg.append("text").text("rond").attr("x", "35").attr("y", "115");
+
+
 svg.append("text").text("rond2").attr("x", "185").attr("y", "215");
 svg.append("text").text("rond3").attr("x", "285").attr("y", "315");
 
@@ -46,4 +48,11 @@ d3.select("#circle3").on("click", () => {
 
 const data = [20, 5, 25, 8, 15]
 
-svg.selectAll("rect").data(data).enter().append("rect").attr("width", "20").attr("height", d=>d).attr("y", d=>500-d).attr("x", (d,i)=>i*22+30)
+svg.selectAll("rect")
+.data(data)
+.enter()
+.append("rect")
+.attr("width", "20")
+.attr("height", d=>d)
+.attr("y", d=>500-d)
+.attr("x", (d,i)=>i*22+30)
